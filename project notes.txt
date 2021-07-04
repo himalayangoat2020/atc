@@ -1,0 +1,14 @@
+ATC website
+
+- changed layout to next project
+- added a google sign-in left to add others
+Remaining
+- if possible make soil texture triangle responsive
+- changes to some design including icons headers and footers
+- authentication functionality to actually display between protected pages, 
+- sign in / pages design
+
+--design a user dashboard after login 
+--what to include in dashboard
+-- finalise the user settings for saving data etc
+--what to include

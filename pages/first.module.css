@@ -1,0 +1,23 @@
+.atc_info .info_box {
+	color: #444444;
+	text-align: center;
+	box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
+	padding: 20px 0 30px 0;
+	border-radius: 4px;
+}
+
+.atc_info > div {
+	justify-content: center;
+	margin: 15px;
+	padding: 10px;
+}
+
+.atc_hide {
+	display: none !important;
+}
+
+.next_prev_btn{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
