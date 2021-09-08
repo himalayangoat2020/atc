@@ -12,3 +12,42 @@ Remaining
 --what to include in dashboard
 -- finalise the user settings for saving data etc
 --what to include
+
+After 9bhadra
+
+31aug 4 hrs
+1sep 8 hrs
+2sep 2hrs
+3sep 4hrs+3hrs
+4sep 
+
+
+https://coolors.co/2c8e0f-ceff1a-247ba0-ff1654-fc7753
+https://coolors.co/2c8e0f-ceff1a-f8333c-261447-95f9e3
+https://coolors.co/2c8e0f-ceff1a-247ba0-ff1654-fc7753
+https://coolors.co/2c8e0f-ceff1a-2274a5-ff1654-e9fff9
+
+
+--Remaining
+left to qa links 
+change colors only may be?? 
+propose redesign after digital strategy implementation
+user auth again implement from new way
+contentful 
+
+
+
+----icons
+<i class="ri-service-fill"></i> consulting
+<i class="ri-question-answer-line"></i>
+
+<i class="ri-paint-fill"></i> lab
+<i class="ri-flask-fill"></i>
+
+<i class="ri-stackshare-fill"></i> training
+<i class="ri-group-line"></i>
+<i class="ri-group-fill"></i>
+
+<i class="ri-bar-chart-grouped-fill"></i>research
+
+<i class="ri-arrow-down-s-fill"></i> arrow down header

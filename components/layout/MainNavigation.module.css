@@ -9,6 +9,11 @@
 	padding-top: 0.7rem;
 }
 
+.header{
+	padding: 10px 10px 10px 10px;
+	box-shadow: 1px 0px 20px 0px grey;
+}
+
 .header img {
 	max-height: 60px !important;
 }
@@ -112,8 +117,8 @@
 }
 
 .nav_menu .drop_down > a:after {
-	content: "\ea99";
-	font-family: IcoFont;
+	content: "\ea4e";
+	font-family: remixicon;
 	padding-left: 5px;
 }
 
@@ -134,7 +139,7 @@
 
 .nav_menu .drop_down .drop_down > a:after {
 	content: "\eaa0";
-	font-family: IcoFont;
+	font-family: remixicon;
 	position: absolute;
 	right: 15px;
 }

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 function MainNavigation() {
 	return (
-		<header className={`${classes.header} fixed-top`}>
+		<header className={`${classes.header}`}>
 			<div className="container-fluid">
 				<div className="row justify-content-center">
 					<div className="col-xl-10 d-flex align-items-center">
@@ -42,7 +42,8 @@ function MainNavigation() {
 									<Link href="/shop">Shop</Link>
 									<ul>
 										<li>
-											<Link href="/product_page">
+											{/* <Link href="/product_page"> */}
+											<Link href="/shop">
 												Soil Testing Kit
 											</Link>
 										</li>
@@ -53,9 +54,9 @@ function MainNavigation() {
 								</li>
 							</ul>
 						</nav>
-                        <Link href="/soil-calculator">
+                        <Link href="/apps">
                             <a className={`${classes.getStartedBtn} scrollto`}>
-                                Soil Texture
+                                Apps
                             </a>
                         </Link>
 					</div>

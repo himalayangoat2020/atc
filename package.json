@@ -9,11 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@auth0/nextjs-auth0": "^1.5.0",
+    "@contentful/rich-text-react-renderer": "^15.3.0",
+    "contentful": "^8.5.3",
     "dotenv": "^10.0.0",
     "gsap": "^3.7.0",
+    "html2canvas": "^1.1.5",
+    "jspdf": "^2.3.1",
+    "keen-slider": "^5.5.1",
     "mongodb": "^3.6.9",
-    "next": "11.0.0",
-    "next-auth": "^3.27.0",
+    "next": "^11.1.2",
     "nodemailer": "^6.6.2",
     "react": "17.0.2",
     "react-dom": "17.0.2"

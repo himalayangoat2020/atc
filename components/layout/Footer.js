@@ -96,7 +96,7 @@ const Footer = () => (
 				</div>
 				<div className="credits">
 					Designed by{" "}
-					<a href="/thgaf.com">The Himalayan Goat</a>
+					<a href="https://www.thgaf.com">The Himalayan Goat</a>
 				</div>
 			</div>
 			<div className="social-links text-center text-md-right pt-3 pt-md-0">
@@ -106,7 +106,7 @@ const Footer = () => (
                 <a href="#" className="google-plus"><i className="bx bxl-skype"></i></a>
                 <a href="#" className="linkedin"><i className="bx bxl-linkedin"></i></a> */}
 				<a href="https://www.facebook.com/atc.soil/" className="facebook">
-					<i className="bx bxl-facebook"></i>
+				<i class="ri-facebook-box-fill"></i>
 				</a>
 			</div>
 		</div>

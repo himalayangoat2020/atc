@@ -9,6 +9,8 @@ import { useState } from "react";
 import { Produces } from "../atc_data/produces";
 import { pHValueTable } from "../atc_data/phTable";
 
+import { withPageAuthRequired } from '@auth0/nextjs-auth0'
+
 function First() {
 	const [appState, setAppState] = useState({});
 	const [currentStep, setCurrentStep] = useState(1);
@@ -169,7 +171,7 @@ function First() {
 					}
 					break;
 				case "terai":
-					switch (session.soil_texture) {
+					switch (newState.soil_texture) {
 						case "sandyLoam":
 							agLime = calculatingAgLimeOf.terai_sandyLoam;
 							break;
@@ -301,3 +303,7 @@ function First() {
 }
 
 export default First;
+
+export const getServerSideProps = withPageAuthRequired({
+	returnTo: '/first'
+})

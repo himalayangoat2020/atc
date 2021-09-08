@@ -1,12 +1,36 @@
 /* reference for further devvelopment https://www.had2know.com/garden/classify-soil-texture-triangle-chart.html */
 import Head from "next/head";
 import { useRef } from "react";
+import html2canvas from "html2canvas";
+import { jsPDF } from "jspdf";
+import { useUser } from "@auth0/nextjs-auth0";
+import { withPageAuthRequired } from '@auth0/nextjs-auth0'
+
 
 const SoilTexture = () => {
+	const { user } = useUser();
+	
 	const sandRef = useRef();
 	const clayRef = useRef();
 	const siltRef = useRef();
 	const textureRef = useRef();
+
+	const savePDF = (e) => {
+		e.preventDefault();
+		const divToDisplay = document.getElementById("soil-calc-form");
+		//console.log(divToDisplay);
+		//, {scrollY: -window.scrollY} makes the whole page visible
+		html2canvas(divToDisplay, {
+			scrollY: -window.scrollY,
+			backgroundColor: null,
+		}).then((canvas) => {
+			const divImage = canvas.toDataURL("image/png");
+			console.log(divImage);
+			const pdf = new jsPDF();
+			pdf.addImage(divImage, "PNG", 0, 0);
+			pdf.save("soilTexture.pdf");
+		});
+	};
 
 	const resultHandler = (e) => {
 		e.preventDefault();
@@ -92,6 +116,13 @@ const SoilTexture = () => {
 			</Head>
 			<section className="breadcrumbs">
 				<div className="container">
+				{user ? <span style={{ float: "right" }}>
+								Welcome {`${user.nickname},`}
+								<a style={{color: "white",marginLeft:'5px'}} href="/api/auth/logout">
+									Logout
+								</a>
+							</span>
+                            : null}
 					<ol>
 						<li>
 							<a href="index.html">Home</a>
@@ -104,7 +135,10 @@ const SoilTexture = () => {
 			<section id="blog" className="blog">
 				<div className="container" data-aos="fade-up">
 					<div className="row calculator">
-						<div className="col-lg-8 soil-calc-form">
+						<div
+							id="soil-calc-form"
+							className="col-lg-8 soil-calc-form"
+						>
 							<div className="form-wrapper">
 								<h4>Soil Texture Calculator</h4>
 								<form action="" name="info">
@@ -199,6 +233,12 @@ const SoilTexture = () => {
 										results*
 									</p>
 								</div>
+								<button
+									className="savePdf btn btn-primary"
+									onClick={(e) => savePDF(e)}
+								>
+									Download as PDF
+								</button>
 							</div>
 						</div>
 					</div>
@@ -209,3 +249,7 @@ const SoilTexture = () => {
 };
 
 export default SoilTexture;
+
+export const getServerSideProps = withPageAuthRequired({
+	returnTo: '/soil-texture'
+})
