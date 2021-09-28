@@ -15,10 +15,12 @@ function MyApp({ Component, pageProps }) {
                     name="viewport"
                 />
                 <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-                <meta
+                {/* <meta
                     name="viewport"
                     content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
-                />
+                /> */}
+                
+
                 <meta content="" name="description" />
                 <meta content="" name="keywords" />
                 <title>Agricultural Technology Center (ATC)</title>
@@ -60,7 +62,7 @@ function MyApp({ Component, pageProps }) {
                 <meta name="nightmode" content="disable" />
 
                 {/* <!-- Fitscreen  --> */}
-                <meta name="viewport" content="uc-fitscreen=yes" />
+                {/* <meta name="viewport" content="uc-fitscreen=yes" /> */}
 
                 {/* <!-- Layout mode --> */}
                 <meta name="layoutmode" content="standard" />
@@ -69,6 +71,7 @@ function MyApp({ Component, pageProps }) {
                 <meta name="screen-orientation" content="portrait" />
 
                 <link rel="manifest" href="/manifest.json" />
+                <link href="/img/atc_logo.png" rel="icon" />
                 <link
                     href="/icons/favicon-192x192.png"
                     rel="icon"
@@ -89,12 +92,16 @@ function MyApp({ Component, pageProps }) {
                 />
                 {/* <link rel="apple-touch-icon" href="/apple-icon.png"></link> */}
 
-                <link
+                <link 
+                    rel="stylesheet"
+                    href="/assets/bootstrap/css/bootstrap.min.css"
+                />
+               {/*  <link
                     rel="stylesheet"
                     href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
                     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
                     crossOrigin="anonymous"
-                />
+                /> */}
 
                 <link
                     href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"

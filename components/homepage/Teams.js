@@ -9,13 +9,13 @@ function Teams() {
 
 	const handleTabClick = (e) => {
 		e.preventDefault();
-		console.log(e.target.innerText);
-		if (e.target.innerText == "Agroecologist.") setActiveTab("agroeco");
-		if (e.target.innerText == "Soil Scientist.")
+		/* console.log(e.currentTarget.innerHTML); */
+		if (e.currentTarget.innerHTML.includes("Agroecologist.")) setActiveTab("agroeco");
+		if (e.currentTarget.innerHTML.includes("Soil Scientist."))
 			setActiveTab("soil_science");
-		if (e.target.innerText == "Plant Scientist.")
+		if (e.currentTarget.innerHTML.includes("Plant Scientist."))
 			setActiveTab("plant_science");
-		if (e.target.innerText == "Agricultural Professional.")
+		if (e.currentTarget.innerHTML.includes("Agricultural Professional."))
 			setActiveTab("agri_pro");
 	};
 
@@ -107,7 +107,7 @@ function Teams() {
 			</div>
 
 			<div className="container view_more_team">
-				<a href="/teams.html" className="view_more">
+				<a href="/team" className="view_more">
 					<button className="btn other-members-btn">
 						Other Members
 					</button>
