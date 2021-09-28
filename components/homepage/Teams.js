@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { useState } from "react";
 import Dibyalaxmi from "./TeamsTab/Dibyalaxmi";
 import Prashant from "./TeamsTab/Prashant";
@@ -107,11 +108,13 @@ function Teams() {
 			</div>
 
 			<div className="container view_more_team">
-				<a href="/team" className="view_more">
-					<button className="btn other-members-btn">
-						Other Members
-					</button>
-				</a>
+				<Link href="/team" className="view_more">
+					<a>
+						<button className="btn other-members-btn">
+							Other Members
+						</button>
+					</a>
+				</Link>
 			</div>
 		</section>
 	);
