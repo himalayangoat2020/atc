@@ -3,6 +3,7 @@ import "../styles/globals.css";
 import { UserProvider } from "@auth0/nextjs-auth0";
 import Head from "next/head";
 import Layout from "../components/layout/Layout";
+import Script from 'next/script';
 
 function MyApp({ Component, pageProps }) {
     return (
@@ -100,11 +101,7 @@ function MyApp({ Component, pageProps }) {
                     rel="stylesheet"
                 />
 
-                <script
-                    src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.bundle.min.js"
-                    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-                    crossOrigin="anonymous"
-                ></script>
+               
             </Head>
             <Layout>
                 {/* <Provider session={pageProps.session}> */}

@@ -1,5 +1,7 @@
 import classes from "./MainNavigation.module.css";
 import Link from "next/link";
+import Image from 'next/image';
+import Logo from '../../public/img/atc_logo.png';
 
 function MainNavigation() {
 	return (
@@ -11,8 +13,8 @@ function MainNavigation() {
 							<Link href="/">
 								<a className={`${classes.logo} mr-auto`}>
                                     <div className="img_logo">
-                                        <img
-                                            src="/img/atc_logo.png"
+                                        <Image
+                                            src={Logo}
                                             alt="atc_logo"
                                         />
                                     </div>

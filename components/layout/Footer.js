@@ -106,7 +106,7 @@ const Footer = () => (
                 <a href="#" className="google-plus"><i className="bx bxl-skype"></i></a>
                 <a href="#" className="linkedin"><i className="bx bxl-linkedin"></i></a> */}
 				<a href="https://www.facebook.com/atc.soil/" className="facebook">
-				<i class="ri-facebook-box-fill"></i>
+				<i className="ri-facebook-box-fill"></i>
 				</a>
 			</div>
 		</div>

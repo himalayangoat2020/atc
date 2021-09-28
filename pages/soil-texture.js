@@ -1,5 +1,5 @@
 /* reference for further devvelopment https://www.had2know.com/garden/classify-soil-texture-triangle-chart.html */
-import Head from "next/head";
+import Script from "next/script";
 import Link from "next/link";
 import Image from "next/image";
 import { useRef } from "react";
@@ -112,9 +112,6 @@ const SoilTexture = () => {
 
     return (
         <>
-            <Head>
-                <script type="text/javascript" src="/wz_jsgraphics.js"></script>
-            </Head>
             <section className="breadcrumbs">
                 <div className="container">
                     {user ? (
@@ -255,6 +252,7 @@ const SoilTexture = () => {
                     </div>
                 </div>
             </section>
+            <Script type="text/javascript" src="/wz_jsgraphics.js"></Script>
         </>
     );
 };

@@ -1,4 +1,6 @@
 import ContactForm from "../components/utils/ContactForm";
+import Image from 'next/image';
+import SoilTestingKit from "../public/img/Soil testing kit.jpg"
 const Shop = () => {
 	return (
 		<>
@@ -18,8 +20,8 @@ const Shop = () => {
 					<div className="row single_product_row">
 						<div className="col-md-6">
 							<div className="product_image">
-								<img
-									src="/img/Soil testing kit.jpg"
+								<Image
+									src={SoilTestingKit}
 									alt="Soil Testing Kit"
 								/>
 							</div>

@@ -1,4 +1,7 @@
 import { useKeenSlider } from "keen-slider/react";
+import Image from 'next/image';
+import Testimonial1 from '../../public/img/testimonials/testimonials-1.jpg';
+import Testimonial2 from '../../public/img/testimonials/testimonials-2.jpg';
 
 const Testomonials = () => {
 	const [sliderRef] = useKeenSlider({ loop: true });
@@ -22,8 +25,8 @@ const Testomonials = () => {
 						<div ref={sliderRef} className="owl-carousel testimonials-carousel">
 							<div className="testimonial-wrap">
 								<div className="testimonial-item">
-									<img
-										src="assets/img/testimonials/testimonials-1.jpg"
+									<Image
+										src={Testimonial1}
 										className="testimonial-img"
 										alt=""
 									/>
@@ -49,8 +52,8 @@ const Testomonials = () => {
 
 							<div className="testimonial-wrap">
 								<div className="testimonial-item">
-									<img
-										src="assets/img/testimonials/testimonials-2.jpg"
+									<Image
+										src={Testimonial2}
 										className="testimonial-img"
 										alt=""
 									/>

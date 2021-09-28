@@ -47,15 +47,15 @@ export default function ContactForm({ formButtonName }) {
 	};
 
 	return (
-		<div class="contact-row contact">
-			<div class="col-lg-8">
-				<form class="php-email-form">
-					<div class="form-row">
-						<div class="col form-group">
+		<div className="contact-row contact">
+			<div className="col-lg-8">
+				<form className="php-email-form">
+					<div className="form-row">
+						<div className="col form-group">
 							<input
 								type="text"
 								name="name"
-								class="form-control"
+								className="form-control"
 								id="name"
 								placeholder="Your Name"
 								data-rule="minlen:4"
@@ -63,12 +63,12 @@ export default function ContactForm({ formButtonName }) {
                                 value={name}
 								onChange={(e) => setName(e.target.value)}
 							/>
-							<div class="validate"></div>
+							<div className="validate"></div>
 						</div>
-						<div class="col form-group">
+						<div className="col form-group">
 							<input
 								type="email"
-								class="form-control"
+								className="form-control"
 								name="email"
 								id="email"
 								placeholder="Your Email"
@@ -77,13 +77,13 @@ export default function ContactForm({ formButtonName }) {
                                 value={email}
 								onChange={(e) => setEmail(e.target.value)}
 							/>
-							<div class="validate"></div>
+							<div className="validate"></div>
 						</div>
 					</div>
-					<div class="form-group">
+					<div className="form-group">
 						<input
 							type="text"
-							class="form-control"
+							className="form-control"
 							name="phone"
 							id="phone"
 							placeholder="Phone No"
@@ -92,11 +92,11 @@ export default function ContactForm({ formButtonName }) {
                             value={phone}
 							onChange={(e) => setPhone(e.target.value)}
 						/>
-						<div class="validate"></div>
+						<div className="validate"></div>
 					</div>
-					<div class="form-group">
+					<div className="form-group">
 						<textarea
-							class="form-control"
+							className="form-control"
 							name="message"
 							rows="5"
 							data-rule="required"
@@ -105,16 +105,16 @@ export default function ContactForm({ formButtonName }) {
                             value={message}
 							onChange={(e) => setMessage(e.target.value)}
 						></textarea>
-						<div class="validate"></div>
+						<div className="validate"></div>
 					</div>
-					<div class="mb-3">
-						<div class="loading">Loading</div>
-						<div class="error-message"></div>
-						<div class="sent-message">
+					<div className="mb-3">
+						<div className="loading">Loading</div>
+						<div className="error-message"></div>
+						<div className="sent-message">
 							Your message has been sent. Thank you!
 						</div>
 					</div>
-					<div class="text-center atc_button">
+					<div className="text-center atc_button">
 						<button type="submit" onClick={(e) => handleSubmit(e)}>
 							{formButtonName}
 						</button>
