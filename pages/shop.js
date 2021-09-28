@@ -2,42 +2,42 @@ import ContactForm from "../components/utils/ContactForm";
 const Shop = () => {
 	return (
 		<>
-			<section class="breadcrumbs">
-				<div class="container">
+			<section className="breadcrumbs">
+				<div className="container">
 					<ol>
 						<li>
 							<a href="index.html">Home</a>
 						</li>
 						<li>Shop</li>
 					</ol>
-					<h2 class="text-center">Shop</h2>
+					<h2 className="text-center">Shop</h2>
 				</div>
 			</section>
-			<section id="single_product" class="blog">
-				<div class="container" data-aos="fade-up">
-					<div class="row single_product_row">
-						<div class="col-md-6">
-							<div class="product_image">
+			<section id="single_product" className="blog">
+				<div className="container" data-aos="fade-up">
+					<div className="row single_product_row">
+						<div className="col-md-6">
+							<div className="product_image">
 								<img
 									src="/img/Soil testing kit.jpg"
 									alt="Soil Testing Kit"
 								/>
 							</div>
 						</div>
-						<div class="col-md-6 desc">
-							<h3 class="product_name">Soil Testing Kit</h3>
+						<div className="col-md-6 desc">
+							<h3 className="product_name">Soil Testing Kit</h3>
 
-							<div class="product_description">
-								<p class="product_heading">
+							<div className="product_description">
+								<p className="product_heading">
 									<b>Contains</b>
 								</p>
-								<p class="desc_text">
+								<p className="desc_text">
 									Each soil testing kit can be used to perform
 									about 50 tests. We can test for parameters
 									like N, P, K, pH, Organic matter. Each soil
 									testing kit comes with
 								</p>
-								<ul class="descriptions_list">
+								<ul className="descriptions_list">
 									<li>Concerntrated sulphuric acid</li>
 									<li>Distilled Water</li>
 									<li>Filter Paper</li>
@@ -49,10 +49,10 @@ const Shop = () => {
 								</ul>
 							</div>
 
-							<p class="price">
+							<p className="price">
 								<b>Price:</b> Rs. 6,900
 							</p>
-							<p class="stock">
+							<p className="stock">
 								<b>Stock:</b> Available (5 pcs)
 							</p>
 						</div>

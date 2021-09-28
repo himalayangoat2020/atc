@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 const Clients = () => {
 	const images = [
         {
@@ -98,27 +100,31 @@ const Clients = () => {
 
 	return (
 		<>
-			<section class="breadcrumbs">
-				<div class="container">
+			<section className="breadcrumbs">
+				<div className="container">
 					<ol>
 						<li>
 							<a href="index.html">Home</a>
 						</li>
 						<li>clients</li>
 					</ol>
-					<h2 class="text-center">Clients we have worked with</h2>
+					<h2 className="text-center">Clients we have worked with</h2>
 				</div>
 			</section>
-			<section id="blog" class="blog">
-				<div class="container" data-aos="fade-up">
-					<div class="row clients_row">
+			<section id="blog" className="blog">
+				<div className="container" data-aos="fade-up">
+					<div className="row clients_row">
 						{
                             images.map((image,index) => (
-                                <div class="col-md-3 col-sm-3">
-                                    <div class="clients_logo">
-                                        <img
+                                <div key={index} className="col-md-3 col-sm-3">
+                                    <div className="clients_logo">
+                                        <Image
                                             src={`/img/clients/${image.url}`}
                                             alt={image.altName}
+                                            width={400}
+                                            height={300}
+                                            objectFit="contain"
+                                            
                                         />
                                     </div>
                                 </div>

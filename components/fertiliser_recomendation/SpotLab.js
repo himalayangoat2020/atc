@@ -2,15 +2,15 @@ const SpotLab = ({onInputChanged}) => (
 	<>
 		<div className="row lab_results atc_hide" onChange={e => onInputChanged(e)}>
 			<div>
-				<label for="nitrogen">Nitrogen: (%)</label>
+				<label htmlFor="nitrogen">Nitrogen: (%)</label>
 				<input type="text" id="nitrogen" name="nitrogen" />
 			</div>
 			<div>
-				<label for="potassium">Potassium: (kg/ha)</label>
+				<label htmlFor="potassium">Potassium: (kg/ha)</label>
 				<input type="text" id="potassium" name="potassium" />
 			</div>
 			<div>
-				<label for="phosphorus">Phosphorus: (kg/ha)</label>
+				<label htmlFor="phosphorus">Phosphorus: (kg/ha)</label>
 				<input type="text" id="phosphorus" name="phosphorus" />
 			</div>
 		</div>

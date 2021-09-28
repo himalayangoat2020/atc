@@ -16,12 +16,12 @@ const BlogCard = ({ blog }) => {
 	return (
 		<>
 		{console.log(slug)}
-			<section id="blog" class="blog">
-				<div class="container" data-aos="fade-up">
-					<div class="row">
-						<div class="col-lg-8 entries">
-							<article class="entry">
-								<div class="entry-img">
+			<section id="blog" className="blog">
+				<div className="container" data-aos="fade-up">
+					<div className="row">
+						<div className="col-lg-8 entries">
+							<article className="entry">
+								<div className="entry-img">
 									<Image
 										src={`https:${url}`}
 										width={
@@ -33,22 +33,22 @@ const BlogCard = ({ blog }) => {
 												.image.height
 										}
 										alt=""
-										class="img-fluid"
+										className="img-fluid"
 									/>
 								</div>
 
-								<h2 class="entry-title">
+								<h2 className="entry-title">
 									<a href="blog-single.html">{title}</a>
 								</h2>
 
-								<div class="entry-meta">
+								<div className="entry-meta">
 									<ul>
-										<li class="d-flex align-items-center">
-											<i class="icofont-user"></i>{" "}
+										<li className="d-flex align-items-center">
+											<i className="icofont-user"></i>{" "}
 											<a href="blog-single.html">ATC</a>
 										</li>
-										<li class="d-flex align-items-center">
-											<i class="icofont-wall-clock"></i>{" "}
+										<li className="d-flex align-items-center">
+											<i className="icofont-wall-clock"></i>{" "}
 											<a href="blog-single.html">
 												<time dateTime="2020-01-01">
 													{/* Nov 10, 2020 */}
@@ -59,7 +59,7 @@ const BlogCard = ({ blog }) => {
 									</ul>
 								</div>
 
-								<div class="entry-content">
+								<div className="entry-content">
 									<p>
 										This is a definitive guide put together
 										by our friends here at ATC. This guide
@@ -70,7 +70,7 @@ const BlogCard = ({ blog }) => {
 										have developed this guide in Nepali
 										language..
 									</p>
-									<div class="read-more">
+									<div className="read-more">
 										<Link href={"/blog/" + slug}>
 											Read More
 										</Link>

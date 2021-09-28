@@ -5,7 +5,7 @@ const PHSelector = ({selectPhHandler}) => (
 				<i className="bx bx-map"></i>
 				<h3>Selecting your pH</h3>
 				<div className="ph_value">
-					<label for="ph_value">Choose a pH Value:</label>
+					<label htmlFor="ph_value">Choose a pH Value:</label>
 					<select name="ph_value" id="pH-select" onChange={e => selectPhHandler(e)}>
 						<option value="">--Please choose an option--</option>
 						<option value="6.4">6.4</option>

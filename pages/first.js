@@ -266,7 +266,7 @@ function First() {
 				<PHSelector selectPhHandler={selectPhHandler} />
 				<ChooseCrop chooseCropHandler={chooseCropHandler} />
 				<CalculateComponent calculationHandler={calculationHandler} /> */}
-				<div class={`atc_button ${styles.next_prev_btn}`}>
+				<div className={`atc_button ${styles.next_prev_btn}`}>
 					<button
 						onClick={back}
 						className={`primary ${

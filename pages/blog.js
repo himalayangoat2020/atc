@@ -5,8 +5,8 @@ export default function BlogsList({blogsList}) {
     /* console.log(blogsList) */
     return(
         <div className="blogs-list">
-            <section class="breadcrumbs">
-				<div class="container">
+            <section className="breadcrumbs">
+				<div className="container">
 					<ol>
 						<li>
 							<a href="index.html">Home</a>

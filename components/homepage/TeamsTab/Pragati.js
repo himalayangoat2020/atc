@@ -1,3 +1,6 @@
+import Image from 'next/image';
+import PragatiPhoto from '../../../public/img/tabs-4.jpg'
+
 const Pragati = () => (
     <div className="row">
         <div className="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 tab-4">
@@ -23,7 +26,7 @@ const Pragati = () => (
             </p>
         </div>
         <div className="col-lg-6 order-1 order-lg-2 text-center">
-            <img src="/img/tabs-4.jpg" alt="" className="img-fluid" />
+            <Image src={PragatiPhoto} alt="photo of pragati" className="img-fluid" />
         </div>
     </div>
 );

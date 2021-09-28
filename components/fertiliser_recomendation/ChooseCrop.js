@@ -7,7 +7,7 @@ const ChooseCrop = ({chooseCropHandler}) => (
 				<i className="bx bx-map"></i>
 				<h3>Which crop are you trying to sow?</h3>
 				<div className="select_crop">
-					<label for="crops">Choose your crop</label>
+					<label htmlFor="crops">Choose your crop</label>
 					<select name="crops" id="crop_selection" onChange={(e) => chooseCropHandler(e)}>
 						<option value="">--Please choose an option--</option>
 						{Produces.map((item, i) => (

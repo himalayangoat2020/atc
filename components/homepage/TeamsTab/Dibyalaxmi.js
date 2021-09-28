@@ -1,3 +1,5 @@
+import Image from 'next/image'
+import Dibya from '../.././../public/img/tabs-1.jpg'
 const Dibyalaxmi = () => (
 	<div className="row">
 		<div
@@ -31,7 +33,7 @@ const Dibyalaxmi = () => (
 			data-aos="fade-up"
 			data-aos-delay="200"
 		>
-			<img src="/img/tabs-1.jpg" alt="" className="img-fluid" />
+			<Image src={Dibya} alt="photo of dibyalaxmi" className="img-fluid" />
 		</div>
 	</div>
 );

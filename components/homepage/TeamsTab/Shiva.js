@@ -1,3 +1,6 @@
+import shiva from '../../../public/img/tabs-3.jpg'
+import Image from 'next/image';
+
 const Shiva = () => (
     <div className="row">
         <div className="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 tab-3">
@@ -18,7 +21,7 @@ const Shiva = () => (
             </p>
         </div>
         <div className="col-lg-6 order-1 order-lg-2 text-center">
-            <img src="/img/tabs-3.jpg" alt="" className="img-fluid" />
+            <Image src={shiva} alt="photo of shiva" className="img-fluid" />
         </div>
     </div>
 );

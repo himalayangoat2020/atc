@@ -3,7 +3,7 @@ const SpotSite = ({ onOptionsSelected }) => (
 		<div className="col-md-12">
 			<h5>Nitrogen</h5>
 			<div className="nitrogen_radio" onChange={(e) => onOptionsSelected(e)}>
-				<label for="nitrogen">High</label>
+				<label htmlFor="nitrogen">High</label>
 				<input
 					type="radio"
 					id="high"
@@ -11,7 +11,7 @@ const SpotSite = ({ onOptionsSelected }) => (
 					value="high"
 					//onChange={(e) => onOptionsSelected(e)}
 				/>
-				<label for="medium">Medium</label>
+				<label htmlFor="medium">Medium</label>
 				<input
 					type="radio"
 					id="medium"
@@ -19,7 +19,7 @@ const SpotSite = ({ onOptionsSelected }) => (
 					value="medium"
 					//onChange={(e) => onOptionsSelected(e)}
 				/>
-				<label for="low">Low</label>
+				<label htmlFor="low">Low</label>
 				<input
 					type="radio"
 					id="low"
@@ -30,7 +30,7 @@ const SpotSite = ({ onOptionsSelected }) => (
 			</div>
 			<h5>Potassium</h5>
 			<div className="potassium_radio" onChange={(e) => onOptionsSelected(e)}>
-				<label for="nitrogen">High</label>
+				<label htmlFor="nitrogen">High</label>
 				<input
 					type="radio"
 					id="high"
@@ -38,7 +38,7 @@ const SpotSite = ({ onOptionsSelected }) => (
 					value="high"
 					
 				/>
-				<label for="medium">Medium</label>
+				<label htmlFor="medium">Medium</label>
 				<input
 					type="radio"
 					id="medium"
@@ -46,7 +46,7 @@ const SpotSite = ({ onOptionsSelected }) => (
 					value="medium"
 					
 				/>
-				<label for="low">Low</label>
+				<label htmlFor="low">Low</label>
 				<input
 					type="radio"
 					id="low"
@@ -57,7 +57,7 @@ const SpotSite = ({ onOptionsSelected }) => (
 			</div>
 			<h5>Phosphorus</h5>
 			<div className="phosphorus_radio" onChange={(e) => onOptionsSelected(e)}>
-				<label for="nitrogen">High</label>
+				<label htmlFor="nitrogen">High</label>
 				<input
 					type="radio"
 					id="high"
@@ -65,7 +65,7 @@ const SpotSite = ({ onOptionsSelected }) => (
 					value="high"
 					
 				/>
-				<label for="potassium">Medium</label>
+				<label htmlFor="potassium">Medium</label>
 				<input
 					type="radio"
 					id="medium"
@@ -73,7 +73,7 @@ const SpotSite = ({ onOptionsSelected }) => (
 					value="medium"
 					
 				/>
-				<label for="low">Low</label>
+				<label htmlFor="low">Low</label>
 				<input
 					type="radio"
 					id="low"

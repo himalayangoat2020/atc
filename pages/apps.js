@@ -28,35 +28,40 @@ const Apps = () => {
 
 	return (
 		<>
-			<section class="breadcrumbs">
-				<div class="row">
-					<div class="container">
+			<section className="breadcrumbs">
+				<div className="row">
+					<div className="container">
 						<div>
                             {user ? <span style={{ float: "right" }}>
 								Welcome {`${user.nickname},`}
-								<a style={{color: "white",marginLeft:'5px'}} href="/api/auth/logout">
+								<Link href="/api/auth/logout">
+								<a style={{color: "white",marginLeft:'5px'}}>
 									Logout
 								</a>
+								</Link>
 							</span>
                             : null}
 							
 							<ol>
 								<li>
-									<a href="index.html">Home</a>
+									<Link href="index.html">
+										<a >Home</a>
+									</Link>
+									
 								</li>
 								<li>Apps</li>
 							</ol>
 						</div>
-						<h2 class="text-center">
+						<h2 className="text-center">
 							Our Applications to help you.{" "}
 						</h2>
 					</div>
 					<div></div>
 				</div>
 			</section>
-			<section id="blog" class="blog">
-				<div class="container" data-aos="fade-up">
-					<div class="row teams_row">
+			<section id="blog" className="blog">
+				<div className="container" data-aos="fade-up">
+					<div className="row teams_row">
 						{console.log(user)}
 						{!user ? (
 							<NotSignedIn />
@@ -64,11 +69,11 @@ const Apps = () => {
 							AppDetails.map((eachApp) => (
 								<div
 									key={eachApp.id}
-									class="row teams-single-item"
+									className="row teams-single-item"
 								>
-									<Link href={eachApp.linkTo}>
-										<div class="member">
-											<figure class="col-lg-5 col-sm-4">
+									<Link href={eachApp.linkTo} passHref>
+										<div className="member">
+											<figure className="col-lg-5 col-sm-4">
 												<Image
 													src={eachApp.icon}
 													width={400}
@@ -76,8 +81,8 @@ const Apps = () => {
 													alt="image of npk calculator app"
 												/>
 											</figure>
-											<div class="featured-box-col2 delay-04s">
-												<h3 class="member_name">
+											<div className="featured-box-col2 delay-04s">
+												<h3 className="member_name">
 													{eachApp.name}
 												</h3>
 												<p>{eachApp.description}</p>

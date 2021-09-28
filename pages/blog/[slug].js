@@ -1,3 +1,4 @@
+/* eslint-disable react/display-name */
 import { createClient } from "contentful";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { INLINES } from "@contentful/rich-text-types";
@@ -73,6 +74,7 @@ const BlogPost = ({ blog }) => {
 					<a
 						href={`https://${node.data.target.fields.file.url}`}
 						target="_blank"
+						rel="noreferrer"
 						style={{
 							color: "blue",
 							textDecoration: "underline",
@@ -184,5 +186,7 @@ const BlogPost = ({ blog }) => {
 		</>
 	);
 };
+
+BlogPost.displayName = 'BlogPost';
 
 export default BlogPost;
