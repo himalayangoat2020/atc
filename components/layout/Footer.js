@@ -112,7 +112,6 @@ const Footer = () => (
 				</a>
 			</div>
 		</div>
-		<Script src="/assets/aos/aos.js"></Script>
 	</footer>
 );
 
