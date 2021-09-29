@@ -1,11 +1,19 @@
+import { useEffect } from "react";
+import AOS from "aos";
 import "../styles/globals.css";
 //import { Provider } from "next-auth/client";
 import { UserProvider } from "@auth0/nextjs-auth0";
 import Head from "next/head";
 import Layout from "../components/layout/Layout";
-import Script from 'next/script';
+import Script from "next/script";
 
 function MyApp({ Component, pageProps }) {
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+        });
+    }, []);
+
     return (
         <>
             <Head>
@@ -19,7 +27,6 @@ function MyApp({ Component, pageProps }) {
                     name="viewport"
                     content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
                 /> */}
-                
 
                 <meta content="" name="description" />
                 <meta content="" name="keywords" />
@@ -84,7 +91,7 @@ function MyApp({ Component, pageProps }) {
                     type="image/png"
                     sizes="32x32"
                 />
-				<link
+                <link
                     href="/icons/favicon-384x384.png"
                     rel="icon"
                     type="image/png"
@@ -92,11 +99,11 @@ function MyApp({ Component, pageProps }) {
                 />
                 {/* <link rel="apple-touch-icon" href="/apple-icon.png"></link> */}
 
-                <link 
+                <link
                     rel="stylesheet"
                     href="/assets/bootstrap/css/bootstrap.min.css"
                 />
-               {/*  <link
+                {/*  <link
                     rel="stylesheet"
                     href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
                     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
@@ -107,8 +114,7 @@ function MyApp({ Component, pageProps }) {
                     href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
                     rel="stylesheet"
                 />
-
-               
+                <link href="/assets/aos/aos.css" rel="stylesheet" />
             </Head>
             <Layout>
                 {/* <Provider session={pageProps.session}> */}

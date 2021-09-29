@@ -1,3 +1,5 @@
+import Script from 'next/script';
+
 const Footer = () => (
 	<footer id="footer">
 		<div className="footer-top">
@@ -110,6 +112,7 @@ const Footer = () => (
 				</a>
 			</div>
 		</div>
+		<Script src="/assets/aos/aos.js"></Script>
 	</footer>
 );
 
