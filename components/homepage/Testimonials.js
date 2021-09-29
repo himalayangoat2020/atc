@@ -1,10 +1,54 @@
 import { useKeenSlider } from "keen-slider/react";
+import "keen-slider/keen-slider.min.css"
 import Image from 'next/image';
 import Testimonial1 from '../../public/img/testimonials/testimonials-1.jpg';
 import Testimonial2 from '../../public/img/testimonials/testimonials-2.jpg';
+import { useEffect, useState, useRef } from "react";
 
 const Testomonials = () => {
-	const [sliderRef] = useKeenSlider({ loop: true });
+	const [pause, setPause] = useState(false);
+	const timer = useRef();
+	const [sliderRef, slider] = useKeenSlider({
+		slidesPerView: 1,
+		mode: "snap",
+		spacing: 15,
+		loop: true,
+		duration: 1200,
+		dragStart: () => {
+			setPause(true);
+		},
+		dragEnd: () => {
+			setPause(false);
+		},/* 
+		breakpoints: {
+			"(min-width: 768px)": {
+				slidesPerView: 2,
+			},
+			"(min-width: 1200px)": {
+				slidesPerView: 3,
+			},
+		}, */
+	});
+
+	useEffect(() => {
+		sliderRef.current.addEventListener("mouseover", () => {
+			setPause(true);
+		});
+		sliderRef.current.addEventListener("mouseout", () => {
+			setPause(false);
+		});
+	}, [sliderRef]);
+
+	useEffect(() => {
+		timer.current = setInterval(() => {
+			if (!pause && slider) {
+				slider.next();
+			}
+		}, 2000);
+		return () => {
+			clearInterval(timer.current);
+		};
+	}, [pause, slider]);
 
 	return (
 		<section id="testimonials" className="testimonials">
@@ -22,8 +66,8 @@ const Testomonials = () => {
 					data-aos-delay="100"
 				>
 					<div className="col-xl-10">
-						<div ref={sliderRef} className="owl-carousel testimonials-carousel">
-							<div className="testimonial-wrap">
+						<div ref={sliderRef} className="owl-carousel keen-slider testimonials-carousel">
+							<div className="keen-slider__slide testimonial-wrap">
 								<div className="testimonial-item">
 									<Image
 										src={Testimonial1}
@@ -50,7 +94,7 @@ const Testomonials = () => {
 								</div>
 							</div>
 
-							<div className="testimonial-wrap">
+							<div className="keen-slider__slide testimonial-wrap">
 								<div className="testimonial-item">
 									<Image
 										src={Testimonial2}
